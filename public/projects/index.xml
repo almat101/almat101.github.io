@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Portfolio</title>
-    <link>http://localhost:1313/projects/</link>
+    <link>https://almat101.github.io/projects/</link>
     <description>Recent content in Projects on Portfolio</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://almat101.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Webserver</title>
-      <link>http://localhost:1313/projects/webserver/webserver/</link>
+      <link>https://almat101.github.io/projects/webserver/webserver/</link>
       <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/webserver/webserver/</guid>
+      <guid>https://almat101.github.io/projects/webserver/webserver/</guid>
       <description>An HTTP server developed from scratch</description>
     </item>
     <item>
       <title>Inception</title>
-      <link>http://localhost:1313/projects/inception/inception/</link>
+      <link>https://almat101.github.io/projects/inception/inception/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/inception/inception/</guid>
+      <guid>https://almat101.github.io/projects/inception/inception/</guid>
       <description>Multiple docker containers</description>
     </item>
   </channel>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Inception | Portfolio</title>
 <meta name="keywords" content="docker, docker compose, redis, mariadb, wordpress, nginx, ftp, hugo">
 <meta name="description" content="Multiple docker containers">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/projects/inception/inception/">
+<link rel="canonical" href="https://almat101.github.io/projects/inception/inception/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://almat101.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://almat101.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://almat101.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://almat101.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://almat101.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/inception/inception/">
+<link rel="alternate" hreflang="en" href="https://almat101.github.io/projects/inception/inception/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +55,77 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://almat101.github.io/projects/inception/inception/">
+  <meta property="og:site_name" content="Portfolio">
+  <meta property="og:title" content="Inception">
+  <meta property="og:description" content="Multiple docker containers">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-11-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-15T00:00:00+00:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Docker Compose">
+    <meta property="article:tag" content="Redis">
+    <meta property="article:tag" content="Mariadb">
+    <meta property="article:tag" content="Wordpress">
+    <meta property="article:tag" content="Nginx">
+    <meta property="og:image" content="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tjTUpEi8h53-DMkweX2TDQ.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tjTUpEi8h53-DMkweX2TDQ.png">
+<meta name="twitter:title" content="Inception">
+<meta name="twitter:description" content="Multiple docker containers">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://almat101.github.io/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Inception",
+      "item": "https://almat101.github.io/projects/inception/inception/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Inception",
+  "name": "Inception",
+  "description": "Multiple docker containers",
+  "keywords": [
+    "docker", "docker compose", "redis", "mariadb", "wordpress", "nginx", "ftp", "hugo"
+  ],
+  "articleBody": "🔗 Subject Inception This project aims to broaden your knowledge of system administration by using Docker. You will virtualize several Docker images, creating them in your new personal virtual machine.\nProject Overview Inception involves setting up and configuring multiple services using Docker containers, each serving a specific purpose. The project uses Docker Compose to manage the containers, networks, and volumes required.\nContainers Nginx Description: Acts as a reverse proxy server to handle HTTP and HTTPS requests. Configuration: Configured to use a self-signed SSL certificate. Ports: Exposes port 443 for HTTPS. Dependencies: Depends on the WordPress container. Build Context: requirements/nginx MariaDB Description: A relational database management system to store WordPress data. Configuration: Uses a custom configuration file. Ports: Exposes port 3306 for database connections. Build Context: requirements/mariadb WordPress Description: A content management system to create and manage websites. Configuration: Automatically configured using a script. Ports: Exposes port 9000 for PHP-FPM. Dependencies: Depends on the MariaDB and Redis containers. Build Context: requirements/wordpress Redis Description: An in-memory data structure store used as a cache for WordPress. Configuration: Uses a custom configuration file. Ports: Exposes port 6379 for Redis connections. Build Context: requirements/bonus/redis FTP Description: An FTP server to manage file uploads. Configuration: Uses a custom configuration file and script. Ports: Exposes ports 21 and 20 for FTP, and a range of ports for passive mode. Dependencies: Depends on the WordPress container. Build Context: requirements/bonus/ftp Hugo Description: A static site generator to create a portfolio website. Configuration: Uses a custom configuration file. Ports: Exposes port 1313 for the Hugo server. Build Context: requirements/bonus/hugo Adminer Description: A lightweight database management tool. Configuration: Accessed via the Nginx container for security. Ports: Exposes port 9001 for internal access. Build Context: requirements/bonus/adminer Prometheus Description: A monitoring tool for collecting and analyzing metrics from services and containers. Configuration: Uses a custom configuration file to monitor specific metrics. Ports: Exposes port 9090 for accessing the Prometheus web interface. Build Context: requirements/bonus/prometheus Node Exporter Description: An exporter for Prometheus to collect hardware and OS metrics from the host machine. Ports: Exposes port 9100 for internal communication with Prometheus. Build Context: requirements/bonus/node-exporter Grafana Description: A visualization tool to create dashboards using metrics collected by Prometheus. Ports: Exposes port 3000 for accessing the Grafana web interface. Build Context: requirements/bonus/grafana Docker Compose Configuration The project uses Docker Compose to manage the containers. The configuration file is located at srcs/docker-compose.yml. It defines the services, networks, and volumes required for the project.\nNetworks inception: A bridge network that connects all the containers. Volumes wordpress: Mounted at /var/www/html for WordPress data. mariadb: Mounted at /var/lib/mysql for MariaDB data. adminer: Mounted at /var/www/adminer for Adminer files. Environment Variables The project requires a .env file with the following environment variables:\nUSER DOMAIN_NAME CERTS KEYS MARIA_DB_NAME MARIA_USER MARIA_PASSWORD MARIA_ROOT_PASSWORD WP_TITLE WP_USER WP_PASSWORD WP_EMAIL WP_ROOT_USER WP_ROOT_PASSWORD WP_ROOT_EMAIL FTP_USER FTP_PASSWORD How to Run the Project Clone the repository and navigate to the project directory.\nCreate a .env file with the required environment variables and put it in srcs folder.\nBuild and start the containers using Makefile:\nmake Access the services via the following URLs:\nWordPress : https://DOMAIN_NAME Hugo : https://DOMAIN_NAME/portfolio Adminer : https://DOMAIN_NAME/adminer Grafana : https://DOMAIN_NAME/grafana Adminer Configuration To connect Adminer to your MariaDB database, use the following settings:\nSystem: MySQL Server:MARIA_DB_NAME Username: MARIA_USER Password: MARIA_PASSWORD Database: MARIA_DB_NAME All values for Server, Username, Password, and Database are sourced from the environment variables defined in your .env file.\nGrafana Configuration When you first access Grafana, you will be prompted to log in:\nLogin:\nUsername: admin Password: admin (You can change this after logging in for the first time) Add a Data Source:\nClick on “Add your first data source” or navigate to “Data Sources” from the side menu. Select “Prometheus” as the data source type. In the Connection settings, set the URL to: http://prometheus:9090 Click on “Save \u0026 Test” to verify the connection. Import a Dashboard:\nGo back to the Grafana home page and click on “Create your first dashboard”. Click on “Find and Import Dashboard”. Enter the dashboard ID 1860 (Node Exporter Full) and click “Load”. In the next step, select Prometheus as the data source and click “Import”. View the Dashboard:\nYou now have a pre-configured dashboard that displays host-level metrics such as CPU usage, memory utilization, disk usage, and more. The imported dashboard provides detailed insights into the performance of your host machine using metrics collected by the Node Exporter and visualized by Grafana.\nLocal Testing If you want to run the project locally on your PC, set DOMAIN_NAME=localhost in your .env file.\nNote: If you use a different domain name, you will need to update your local /etc/hosts file to map the domain to 127.0.0.1. This file requires sudo permissions to edit. For example:\n127.0.0.1 your-domain-name ",
+  "wordCount" : "787",
+  "inLanguage": "en",
+  "image":"https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tjTUpEi8h53-DMkweX2TDQ.png","datePublished": "2024-11-15T00:00:00Z",
+  "dateModified": "2024-11-15T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://almat101.github.io/projects/inception/inception/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Portfolio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://almat101.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +143,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
+            <a href="https://almat101.github.io/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,22 +169,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://almat101.github.io/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog" title="Blog">
+                <a href="https://almat101.github.io/blog/" title="Blog">
                     <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/projects" title="Projects">
+                <a href="https://almat101.github.io/projects/" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/search" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://almat101.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -327,21 +397,21 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
-      <li><a href="http://localhost:1313/tags/docker-compose/">Docker Compose</a></li>
-      <li><a href="http://localhost:1313/tags/redis/">Redis</a></li>
-      <li><a href="http://localhost:1313/tags/mariadb/">Mariadb</a></li>
-      <li><a href="http://localhost:1313/tags/wordpress/">Wordpress</a></li>
-      <li><a href="http://localhost:1313/tags/nginx/">Nginx</a></li>
-      <li><a href="http://localhost:1313/tags/ftp/">Ftp</a></li>
-      <li><a href="http://localhost:1313/tags/hugo/">Hugo</a></li>
+      <li><a href="https://almat101.github.io/tags/docker/">Docker</a></li>
+      <li><a href="https://almat101.github.io/tags/docker-compose/">Docker Compose</a></li>
+      <li><a href="https://almat101.github.io/tags/redis/">Redis</a></li>
+      <li><a href="https://almat101.github.io/tags/mariadb/">Mariadb</a></li>
+      <li><a href="https://almat101.github.io/tags/wordpress/">Wordpress</a></li>
+      <li><a href="https://almat101.github.io/tags/nginx/">Nginx</a></li>
+      <li><a href="https://almat101.github.io/tags/ftp/">Ftp</a></li>
+      <li><a href="https://almat101.github.io/tags/hugo/">Hugo</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Portfolio</a></span> · 
+        <span>&copy; 2025 <a href="https://almat101.github.io/">Portfolio</a></span> · 
 
     <span>
         Powered by
