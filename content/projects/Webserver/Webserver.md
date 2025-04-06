@@ -1,7 +1,7 @@
 ---
 title: "Webserver"
 description: "An HTTP server developed from scratch"
-date: 2024-09-26
+date: "2024-09-26"
 draft: false
 tags: ["HTTP", "C++", "GET", "POST", "DELETE", "nginx"]
 showToc: false

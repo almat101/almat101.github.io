@@ -1,7 +1,7 @@
 ---
 title: "Inception"
 description: "Multiple docker containers"
-date: 2024-11-15
+date: "2024-11-15"
 draft: false
 tags: ["docker", "docker compose", "redis", "mariadb", "wordpress", "nginx", "ftp", "hugo"]
 showToc: false

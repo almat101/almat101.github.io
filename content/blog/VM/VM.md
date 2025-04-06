@@ -1,7 +1,7 @@
 ---
 title: "Virtual Machine"
 description: "Setting up a new VM for inception project"
-date: 2024-11-01
+date: "2024-11-01"
 draft: false
 tags: ["docker", "VM", "inception"]
 showToc: false
