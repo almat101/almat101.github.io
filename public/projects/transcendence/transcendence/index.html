@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Transcendence | Portfolio</title>
+<meta name="keywords" content="docker, docker compose, microservice, django, postgres, javascript, bootstrap, nginx, Grafana, Prometheus, Elasticsearch, Kibana, Logstash">
+<meta name="description" content="Multiple docker containers">
+<meta name="author" content="">
+<link rel="canonical" href="https://almat101.github.io/projects/transcendence/transcendence/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://almat101.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://almat101.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://almat101.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://almat101.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://almat101.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://almat101.github.io/projects/transcendence/transcendence/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://almat101.github.io/projects/transcendence/transcendence/">
+  <meta property="og:site_name" content="Portfolio">
+  <meta property="og:title" content="Transcendence">
+  <meta property="og:description" content="Multiple docker containers">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-03-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-20T00:00:00+00:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Docker Compose">
+    <meta property="article:tag" content="Microservice">
+    <meta property="article:tag" content="Django">
+    <meta property="article:tag" content="Postgres">
+    <meta property="article:tag" content="Javascript">
+    <meta property="og:image" content="https://raw.githubusercontent.com/almat101/Transcendence/refs/heads/main/img/Screenshots/login_cut.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/almat101/Transcendence/refs/heads/main/img/Screenshots/login_cut.png">
+<meta name="twitter:title" content="Transcendence">
+<meta name="twitter:description" content="Multiple docker containers">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://almat101.github.io/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Transcendence",
+      "item": "https://almat101.github.io/projects/transcendence/transcendence/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Transcendence",
+  "name": "Transcendence",
+  "description": "Multiple docker containers",
+  "keywords": [
+    "docker", "docker compose", "microservice", "django", "postgres", "javascript", "bootstrap", "nginx", "Grafana", "Prometheus", "Elasticsearch", "Kibana", "Logstash"
+  ],
+  "articleBody": "🔗 Subject Transcendence Multi-Service Dockerized Application This project is about creating a multi-service application orchestrated with Docker Compose. It integrates static frontend, backend microservices, advanced monitoring tools, and an ELK stack for centralized logging and analytics. The architecture emphasizes modularity, scalability, and seamless deployment, making it robust and efficient for modern application needs.\nTable of Contents Overview Services Proxy Backend Services Monitoring ELK Stack Setup Usage Volumes Networks Overview This project is a Single Page Application (SPA) that replicates the classic Pong game with modern features and a robust backend architecture. It includes:\nSecure Login: User authentication and authorization for a personalized experience. Tournament Management: Organize and participate in tournaments with other players. AI Opponent: Play against an AI-powered opponent for solo gameplay. Match History: Track and review the history of all matches played. Monitoring and Analytics: Tools like Grafana, Prometheus, and Alertmanager for real-time monitoring and alerting. Centralized Logging: An ELK stack (Elasticsearch, Logstash, Kibana) for managing and visualizing logs. Reverse Proxy: An nginx proxy server for secure routing and load balancing. The application is containerized using Docker and orchestrated with Docker Compose, ensuring scalability, modularity, and ease of deployment.\nServices Proxy The Proxy service acts as a reverse proxy and includes an API Gateway implemented within Nginx. It provides the following features:\nImage: proxy Ports: 8090:8090 Healthcheck: Ensures the proxy is running and accessible. Dependencies: Relies on backend services (e.g., authentication, tournament, history), monitoring tools (e.g., Grafana, Prometheus), and the ELK stack. The Nginx configuration includes API Gateway functionality, making it a lightweight yet effective API Gateway. It handles:\nRouting: Directs API requests to appropriate backend services based on the URL path (/api/user/ to auth-service, /api/tournament/ to tournament-service and /api/history/ to history-service). Rate Limiting: Implements request rate limiting using the api_limit zone to prevent abuse. Authentication: Validates JWT tokens for protected routes and extracts user information for authenticated requests. Security: Adds standard proxy headers and enforces HTTPS with strong SSL/TLS configurations. Static File Serving: Serves the frontend static files, which are copied into the container during the Docker build process, ensuring efficient delivery of the application’s static assets. Backend Services Auth Service\nDescription: Handles user authentication and authorization, including secure login and OAuth integration. Framework: Built with Django. Health Check: Exposes health checks at /watchman/?skip=watchman.checks.storage. History Service\nDescription: Manages the storage and retrieval of match history, allowing users to review past games. Framework: Built with Django. Health Check: Exposes health checks at /watchman/. Tournament Service\nDescription: Provides functionality for creating, managing, and participating in tournaments. Framework: Built with Django. Health Check: Exposes health checks at /watchman/. Databases\nDescription: Each backend service is paired with its own PostgreSQL database to ensure data isolation and scalability. Services: auth_db: Stores user authentication and authorization data. history_db: Stores match history data. tournament_db: Stores tournament-related data. Monitoring Grafana\nDescription: A powerful visualization and monitoring dashboard that provides insights into system and application performance. Features: Two pre-configured dashboards: Django Dashboard: Allows switching between all microservices (e.g., auth-service, history-service, tournament-service) to monitor metrics like request rates, response times, and errors. Node Exporter Dashboard: Displays detailed system metrics, including CPU usage, RAM utilization, disk space, and network activity. Access: Available at https://localhost/grafana/. Prometheus\nDescription: A metrics collection and monitoring system that scrapes data from various services and evaluates alerting rules. Features: Collects metrics from all microservices, PostgreSQL databases, and the Nginx proxy. Evaluates alerting rules defined in rules_1.yml, rules_2.yml, rules_3.yml, and rules_4.yml. Healthcheck: Endpoint available at http://localhost:9090/-/healthy. Node Exporter\nDescription: A lightweight exporter that collects system-level metrics from the host machine. Features: Provides data on CPU usage, memory availability, disk space, and network performance. Integrated with the Node Exporter Dashboard in Grafana for detailed visualization. Alertmanager\nDescription: Manages alerts generated by Prometheus and routes them to configured notification channels. Features: Sends alerts via email for critical issues, such as service downtime, high CPU usage, low disk space, or memory exhaustion. Configured with alerting rules for all microservices and system metrics. Postgres Exporters\nDescription: Specialized exporters that collect metrics from PostgreSQL databases. Features: Monitors database health, active connections, query performance, replication lag, and disk usage. Metrics are visualized in Grafana and used for alerting in Prometheus. Alerts and Notifications Alert Rules: Defined in rules_1.yml, rules_2.yml, rules_3.yml, and rules_4.yml to monitor critical conditions across all services and infrastructure. Examples: Instance Down: Alerts when any service or exporter is unreachable. High CPU Load: Triggers when CPU usage exceeds 80% for more than 5 minutes. Low Disk Space: Alerts when disk space falls below 10%. PostgreSQL Issues: Monitors database downtime, high connection counts, slow queries, and replication lag. Nginx Proxy Down: Alerts if the Nginx proxy becomes unreachable. Notification: Alerts are sent via email to ensure timely responses to critical issues. ELK Stack Elasticsearch\nDescription: A distributed search and analytics engine that serves as the centralized storage for logs and analytics. Features: Stores and indexes logs from various sources, including Nginx access.log. Provides powerful search and aggregation capabilities for log analysis. Security: Fully secured with SSL and authentication. Certificates for Elasticsearch are generated by a dedicated setup container, which creates all necessary certificates for Elasticsearch and Kibana. Configured to use HTTPS for all communications, ensuring data integrity and privacy. Integration: Works seamlessly with Logstash for log ingestion and Kibana for visualization. Logstash\nDescription: A data processing pipeline that ingests, transforms, and forwards logs to Elasticsearch. Features: Parses Nginx access.log files and enriches the data for analysis. Configured to securely communicate with Elasticsearch using SSL certificates generated by the setup container. Role in the Stack: Acts as the intermediary between Nginx logs and Elasticsearch, ensuring logs are properly formatted and indexed for analysis. Kibana\nDescription: A visualization and exploration tool for Elasticsearch data. Features: Provides a pre-configured dashboard to analyze Nginx access.log data, including request rates, response statuses, client IPs, and more. Allows users to query and visualize Elasticsearch data with ease. Access: Available at https://localhost/kibana. Security: Uses SSL for secure communication with Elasticsearch. Certificates for secure communication are generated by the setup container. Dashboards: Includes a dedicated dashboard for analyzing all aspects of the Nginx access.log, providing insights into traffic patterns, error rates, and client activity. Additional Notes Setup Container:\nA dedicated container (setup) is responsible for generating all SSL certificates required by Elasticsearch and Kibana. Ensures that all components of the ELK stack communicate securely using HTTPS. Nginx Access Logs:\nThe ELK stack is configured to parse and analyze Nginx access.log files. Kibana’s dashboard provides detailed insights into Nginx traffic, including request patterns, error rates, and client activity. Secure Communication:\nAll components of the ELK stack (Elasticsearch, Logstash, and Kibana) are configured to use SSL for secure communication, ensuring data privacy and integrity. ",
+  "wordCount" : "1104",
+  "inLanguage": "en",
+  "image":"https://raw.githubusercontent.com/almat101/Transcendence/refs/heads/main/img/Screenshots/login_cut.png","datePublished": "2025-03-20T00:00:00Z",
+  "dateModified": "2025-03-20T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://almat101.github.io/projects/transcendence/transcendence/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Portfolio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://almat101.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://almat101.github.io/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://almat101.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://almat101.github.io/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://almat101.github.io/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://almat101.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Transcendence
+    </h1>
+    <div class="post-description">
+      Multiple docker containers
+    </div>
+    <div class="post-meta"><span title='2025-03-20 00:00:00 +0000 UTC'>March 20, 2025</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://raw.githubusercontent.com/almat101/Transcendence/refs/heads/main/img/Screenshots/login_cut.png" alt="">
+        
+</figure>
+  <div class="post-content"><h3 id="-subject">🔗 <a href="">Subject</a><a hidden class="anchor" aria-hidden="true" href="#-subject">#</a></h3>
+<h1 id="transcendence">Transcendence<a hidden class="anchor" aria-hidden="true" href="#transcendence">#</a></h1>
+<h1 id="multi-service-dockerized-application">Multi-Service Dockerized Application<a hidden class="anchor" aria-hidden="true" href="#multi-service-dockerized-application">#</a></h1>
+<p>This project is about creating a multi-service application orchestrated with Docker Compose. It integrates static frontend, backend microservices, advanced monitoring tools, and an ELK stack for centralized logging and analytics. The architecture emphasizes modularity, scalability, and seamless deployment, making it robust and efficient for modern application needs.</p>
+<h2 id="table-of-contents">Table of Contents<a hidden class="anchor" aria-hidden="true" href="#table-of-contents">#</a></h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#services">Services</a>
+<ul>
+<li><a href="#proxy">Proxy</a></li>
+<li><a href="#backend-services">Backend Services</a></li>
+<li><a href="#monitoring">Monitoring</a></li>
+<li><a href="#elk-stack">ELK Stack</a></li>
+</ul>
+</li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#volumes">Volumes</a></li>
+<li><a href="#networks">Networks</a></li>
+</ul>
+<h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>This project is a Single Page Application (SPA) that replicates the classic Pong game with modern features and a robust backend architecture. It includes:</p>
+<ul>
+<li><strong>Secure Login</strong>: User authentication and authorization for a personalized experience.</li>
+<li><strong>Tournament Management</strong>: Organize and participate in tournaments with other players.</li>
+<li><strong>AI Opponent</strong>: Play against an AI-powered opponent for solo gameplay.</li>
+<li><strong>Match History</strong>: Track and review the history of all matches played.</li>
+<li><strong>Monitoring and Analytics</strong>: Tools like Grafana, Prometheus, and Alertmanager for real-time monitoring and alerting.</li>
+<li><strong>Centralized Logging</strong>: An ELK stack (Elasticsearch, Logstash, Kibana) for managing and visualizing logs.</li>
+<li><strong>Reverse Proxy</strong>: An nginx proxy server for secure routing and load balancing.</li>
+</ul>
+<p>The application is containerized using Docker and orchestrated with Docker Compose, ensuring scalability, modularity, and ease of deployment.</p>
+<h2 id="services">Services<a hidden class="anchor" aria-hidden="true" href="#services">#</a></h2>
+<h3 id="proxy">Proxy<a hidden class="anchor" aria-hidden="true" href="#proxy">#</a></h3>
+<p>The <strong>Proxy</strong> service acts as a reverse proxy and includes an API Gateway implemented within Nginx. It provides the following features:</p>
+<ul>
+<li><strong>Image</strong>: proxy</li>
+<li><strong>Ports</strong>: <code>8090:8090</code></li>
+<li><strong>Healthcheck</strong>: Ensures the proxy is running and accessible.</li>
+<li><strong>Dependencies</strong>: Relies on backend services (e.g., authentication, tournament, history), monitoring tools (e.g., Grafana, Prometheus), and the ELK stack.</li>
+</ul>
+<p>The Nginx configuration includes API Gateway functionality, making it a lightweight yet effective API Gateway. It handles:</p>
+<ul>
+<li><strong>Routing</strong>: Directs API requests to appropriate backend services based on the URL path (<code>/api/user/</code> to <code>auth-service</code>, <code>/api/tournament/</code> to <code>tournament-service</code> and  <code>/api/history/</code> to <code>history-service</code>).</li>
+<li><strong>Rate Limiting</strong>: Implements request rate limiting using the <code>api_limit</code> zone to prevent abuse.</li>
+<li><strong>Authentication</strong>: Validates JWT tokens for protected routes and extracts user information for authenticated requests.</li>
+<li><strong>Security</strong>: Adds standard proxy headers and enforces HTTPS with strong SSL/TLS configurations.</li>
+<li><strong>Static File Serving</strong>: Serves the frontend static files, which are copied into the container during the Docker build process, ensuring efficient delivery of the application&rsquo;s static assets.</li>
+</ul>
+<h3 id="backend-services">Backend Services<a hidden class="anchor" aria-hidden="true" href="#backend-services">#</a></h3>
+<ol>
+<li>
+<p><strong>Auth Service</strong></p>
+<ul>
+<li><strong>Description</strong>: Handles user authentication and authorization, including secure login and OAuth integration.</li>
+<li><strong>Framework</strong>: Built with Django.</li>
+<li><strong>Health Check</strong>: Exposes health checks at <code>/watchman/?skip=watchman.checks.storage</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>History Service</strong></p>
+<ul>
+<li><strong>Description</strong>: Manages the storage and retrieval of match history, allowing users to review past games.</li>
+<li><strong>Framework</strong>: Built with Django.</li>
+<li><strong>Health Check</strong>: Exposes health checks at <code>/watchman/</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tournament Service</strong></p>
+<ul>
+<li><strong>Description</strong>: Provides functionality for creating, managing, and participating in tournaments.</li>
+<li><strong>Framework</strong>: Built with Django.</li>
+<li><strong>Health Check</strong>: Exposes health checks at <code>/watchman/</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Databases</strong></p>
+<ul>
+<li><strong>Description</strong>: Each backend service is paired with its own PostgreSQL database to ensure data isolation and scalability.</li>
+<li><strong>Services</strong>:
+<ul>
+<li><code>auth_db</code>: Stores user authentication and authorization data.</li>
+<li><code>history_db</code>: Stores match history data.</li>
+<li><code>tournament_db</code>: Stores tournament-related data.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="monitoring">Monitoring<a hidden class="anchor" aria-hidden="true" href="#monitoring">#</a></h3>
+<ol>
+<li>
+<p><strong>Grafana</strong></p>
+<ul>
+<li><strong>Description</strong>: A powerful visualization and monitoring dashboard that provides insights into system and application performance.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Two pre-configured dashboards:
+<ol>
+<li><strong>Django Dashboard</strong>: Allows switching between all microservices (e.g., <code>auth-service</code>, <code>history-service</code>, <code>tournament-service</code>) to monitor metrics like request rates, response times, and errors.</li>
+<li><strong>Node Exporter Dashboard</strong>: Displays detailed system metrics, including CPU usage, RAM utilization, disk space, and network activity.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>Access</strong>: Available at <code>https://localhost/grafana/</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prometheus</strong></p>
+<ul>
+<li><strong>Description</strong>: A metrics collection and monitoring system that scrapes data from various services and evaluates alerting rules.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Collects metrics from all microservices, PostgreSQL databases, and the Nginx proxy.</li>
+<li>Evaluates alerting rules defined in rules_1.yml, rules_2.yml, rules_3.yml, and rules_4.yml.</li>
+</ul>
+</li>
+<li><strong>Healthcheck</strong>: Endpoint available at <code>http://localhost:9090/-/healthy</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Node Exporter</strong></p>
+<ul>
+<li><strong>Description</strong>: A lightweight exporter that collects system-level metrics from the host machine.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Provides data on CPU usage, memory availability, disk space, and network performance.</li>
+<li>Integrated with the Node Exporter Dashboard in Grafana for detailed visualization.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Alertmanager</strong></p>
+<ul>
+<li><strong>Description</strong>: Manages alerts generated by Prometheus and routes them to configured notification channels.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Sends alerts via email for critical issues, such as service downtime, high CPU usage, low disk space, or memory exhaustion.</li>
+<li>Configured with alerting rules for all microservices and system metrics.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Postgres Exporters</strong></p>
+<ul>
+<li><strong>Description</strong>: Specialized exporters that collect metrics from PostgreSQL databases.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Monitors database health, active connections, query performance, replication lag, and disk usage.</li>
+<li>Metrics are visualized in Grafana and used for alerting in Prometheus.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="alerts-and-notifications">Alerts and Notifications<a hidden class="anchor" aria-hidden="true" href="#alerts-and-notifications">#</a></h3>
+<ul>
+<li><strong>Alert Rules</strong>: Defined in rules_1.yml, rules_2.yml, rules_3.yml, and rules_4.yml to monitor critical conditions across all services and infrastructure.
+<ul>
+<li>Examples:
+<ul>
+<li><strong>Instance Down</strong>: Alerts when any service or exporter is unreachable.</li>
+<li><strong>High CPU Load</strong>: Triggers when CPU usage exceeds 80% for more than 5 minutes.</li>
+<li><strong>Low Disk Space</strong>: Alerts when disk space falls below 10%.</li>
+<li><strong>PostgreSQL Issues</strong>: Monitors database downtime, high connection counts, slow queries, and replication lag.</li>
+<li><strong>Nginx Proxy Down</strong>: Alerts if the Nginx proxy becomes unreachable.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Notification</strong>: Alerts are sent via email to ensure timely responses to critical issues.</li>
+</ul>
+<h3 id="elk-stack">ELK Stack<a hidden class="anchor" aria-hidden="true" href="#elk-stack">#</a></h3>
+<ol>
+<li>
+<p><strong>Elasticsearch</strong></p>
+<ul>
+<li><strong>Description</strong>: A distributed search and analytics engine that serves as the centralized storage for logs and analytics.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Stores and indexes logs from various sources, including Nginx <code>access.log</code>.</li>
+<li>Provides powerful search and aggregation capabilities for log analysis.</li>
+</ul>
+</li>
+<li><strong>Security</strong>:
+<ul>
+<li>Fully secured with SSL and authentication.</li>
+<li>Certificates for Elasticsearch are generated by a dedicated <code>setup</code> container, which creates all necessary certificates for Elasticsearch and Kibana.</li>
+<li>Configured to use HTTPS for all communications, ensuring data integrity and privacy.</li>
+</ul>
+</li>
+<li><strong>Integration</strong>: Works seamlessly with Logstash for log ingestion and Kibana for visualization.</li>
+</ul>
+</li>
+<li>
+<p><strong>Logstash</strong></p>
+<ul>
+<li><strong>Description</strong>: A data processing pipeline that ingests, transforms, and forwards logs to Elasticsearch.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Parses Nginx <code>access.log</code> files and enriches the data for analysis.</li>
+<li>Configured to securely communicate with Elasticsearch using SSL certificates generated by the <code>setup</code> container.</li>
+</ul>
+</li>
+<li><strong>Role in the Stack</strong>:
+<ul>
+<li>Acts as the intermediary between Nginx logs and Elasticsearch, ensuring logs are properly formatted and indexed for analysis.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Kibana</strong></p>
+<ul>
+<li><strong>Description</strong>: A visualization and exploration tool for Elasticsearch data.</li>
+<li><strong>Features</strong>:
+<ul>
+<li>Provides a pre-configured dashboard to analyze Nginx <code>access.log</code> data, including request rates, response statuses, client IPs, and more.</li>
+<li>Allows users to query and visualize Elasticsearch data with ease.</li>
+</ul>
+</li>
+<li><strong>Access</strong>: Available at <code>https://localhost/kibana</code>.</li>
+<li><strong>Security</strong>:
+<ul>
+<li>Uses SSL for secure communication with Elasticsearch.</li>
+<li>Certificates for secure communication are generated by the <code>setup</code> container.</li>
+</ul>
+</li>
+<li><strong>Dashboards</strong>:
+<ul>
+<li>Includes a dedicated dashboard for analyzing all aspects of the Nginx <code>access.log</code>, providing insights into traffic patterns, error rates, and client activity.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-notes">Additional Notes<a hidden class="anchor" aria-hidden="true" href="#additional-notes">#</a></h3>
+<ul>
+<li>
+<p><strong>Setup Container</strong>:</p>
+<ul>
+<li>A dedicated container (<code>setup</code>) is responsible for generating all SSL certificates required by Elasticsearch and Kibana.</li>
+<li>Ensures that all components of the ELK stack communicate securely using HTTPS.</li>
+</ul>
+</li>
+<li>
+<p><strong>Nginx Access Logs</strong>:</p>
+<ul>
+<li>The ELK stack is configured to parse and analyze Nginx <code>access.log</code> files.</li>
+<li>Kibana&rsquo;s dashboard provides detailed insights into Nginx traffic, including request patterns, error rates, and client activity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Secure Communication</strong>:</p>
+<ul>
+<li>All components of the ELK stack (Elasticsearch, Logstash, and Kibana) are configured to use SSL for secure communication, ensuring data privacy and integrity.</li>
+</ul>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://almat101.github.io/tags/docker/">Docker</a></li>
+      <li><a href="https://almat101.github.io/tags/docker-compose/">Docker Compose</a></li>
+      <li><a href="https://almat101.github.io/tags/microservice/">Microservice</a></li>
+      <li><a href="https://almat101.github.io/tags/django/">Django</a></li>
+      <li><a href="https://almat101.github.io/tags/postgres/">Postgres</a></li>
+      <li><a href="https://almat101.github.io/tags/javascript/">Javascript</a></li>
+      <li><a href="https://almat101.github.io/tags/bootstrap/">Bootstrap</a></li>
+      <li><a href="https://almat101.github.io/tags/nginx/">Nginx</a></li>
+      <li><a href="https://almat101.github.io/tags/grafana/">Grafana</a></li>
+      <li><a href="https://almat101.github.io/tags/prometheus/">Prometheus</a></li>
+      <li><a href="https://almat101.github.io/tags/elasticsearch/">Elasticsearch</a></li>
+      <li><a href="https://almat101.github.io/tags/kibana/">Kibana</a></li>
+      <li><a href="https://almat101.github.io/tags/logstash/">Logstash</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://almat101.github.io/">Portfolio</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
