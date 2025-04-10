@@ -1,67 +1,115 @@
-name: Deploy Hugo site to Pages
+name: GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch (which we set to 'source')
   push:
     branches:
-      - source #changed from main(add source branch also in setting/environment)
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: write # Allow pushing to the main branch
-  pages: write    # Allow deployment to Pages
-  id-token: write # Allow OIDC token generation (may be needed by some actions)
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-# Default to bash
-defaults:
-  run:
-    shell: bash
+      - source  # Set a branch to deploy
+  pull_request:
 
 jobs:
-  # Build job
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.145.0
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
-          submodules: recursive # Fetch Hugo themes (if submodule)
-          fetch-depth: 0       # Fetch all history for .GitInfo and Lastmod
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3 # Updated to v3
+        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: ${{ env.HUGO_VERSION }}
-          # extended: true # Uncomment if using the extended version for SASS/SCSS support
+          hugo-version: '0.145.0'
+          extended: true
 
-      - name: Build Hugo site
-        run: hugo --minify # Builds the site into the 'public' directory
+      - name: Check version
+        run: hugo version
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3 # Use official action
+      - name: Build
+        run: hugo --minify
+
+      - name: Check dir # checking public dir
+        run: ls -R ; echo ; echo ; ls -R ./public
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Upload the 'public' directory created by Hugo
-          path: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build # Run after the build job is successful
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # Use official action
+
+# name: Deploy Hugo site to Pages
+
+# on:
+#   # Runs on pushes targeting the default branch (which we set to 'source')
+#   push:
+#     branches:
+#       - source #changed from main(add source branch also in setting/environment)
+
+#   # Allows you to run this workflow manually from the Actions tab
+#   workflow_dispatch:
+
+# # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# permissions:
+#   contents: write # Allow pushing to the main branch
+#   pages: write    # Allow deployment to Pages
+#   id-token: write # Allow OIDC token generation (may be needed by some actions)
+
+# # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# concurrency:
+#   group: "pages"
+#   cancel-in-progress: false
+
+# # Default to bash
+# defaults:
+#   run:
+#     shell: bash
+
+# jobs:
+#   # Build job
+#   build:
+#     runs-on: ubuntu-latest
+#     env:
+#       HUGO_VERSION: 0.145.0
+#     steps:
+#       - name: Checkout source code
+#         uses: actions/checkout@v4
+#         with:
+#           submodules: recursive # Fetch Hugo themes (if submodule)
+#           fetch-depth: 0       # Fetch all history for .GitInfo and Lastmod
+
+#       - name: Setup Hugo
+#         uses: peaceiris/actions-hugo@v3
+#         with:
+#           hugo-version: ${{ env.HUGO_VERSION }}
+#           extended: true
+
+#       - name: Check hugo version
+#         run: hugo version
+
+#       - name: Build Hugo site
+#         run: hugo --minify
+
+#       - name: Debug #check if public dir is created
+#         run: ls -R
+
+#       - name: Upload artifact
+#         uses: actions/upload-pages-artifact@v3 # Use official action
+#         with:
+#           # Upload the 'public' directory created by Hugo
+#           path: ./public
+
+#   # Deployment job
+#   deploy:
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+#     runs-on: ubuntu-latest
+#     needs: build # Run after the build job is successful
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v4 # Use official action
