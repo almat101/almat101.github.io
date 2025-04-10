@@ -7,7 +7,7 @@ tags: ["docker", "VM", "inception"]
 showToc: false
 weight: 202
 cover:
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnYVBwutkk6t1UHiPbazY2ykrl_BMB2xDrJA&s"
+    image: "/logo/vm.png"
 ---
 
 # Setting Up the VM

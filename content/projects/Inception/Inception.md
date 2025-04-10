@@ -7,7 +7,7 @@ tags: ["docker", "docker compose", "redis", "mariadb", "wordpress", "nginx", "ft
 showToc: false
 weight: 202
 cover:
-    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tjTUpEi8h53-DMkweX2TDQ.png"
+    image: "/logo/inception.png"
 ---
 ### 🔗 [Subject]()
 

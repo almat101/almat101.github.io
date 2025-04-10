@@ -7,7 +7,7 @@ tags: ["HTTP", "C++", "GET", "POST", "DELETE", "nginx"]
 showToc: false
 weight: 201
 cover:
-    image: "https://www.cionfs.it/wp-content/uploads/2021/03/webserver.png"
+    image: "/logo/webserver.png"
 ---
 ### 🔗 [Subject](https://github.com/mlongo03/WebServ_42/blob/main/var/www/WebServer.pdf)
 

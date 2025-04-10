@@ -7,7 +7,7 @@ tags: ["docker", "image", "container"]
 showToc: false
 weight: 202
 cover:
-    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tjTUpEi8h53-DMkweX2TDQ.png"
+    image: "/logo/docker.webp"
 ---
 
 ## What is Docker?
